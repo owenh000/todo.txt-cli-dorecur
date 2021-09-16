@@ -146,7 +146,8 @@ Note this **warning**, however: todo.txt-cli will ignore a broken
 symbolic link. Therefore if the repository is moved in the future, you
 will be marking recurring tasks as complete without creating new
 ones. If this is a concern, simply copy the script into place and
-rename as described above.
+rename as described above. (See `todo.txt-cli issue #359
+<https://github.com/todotxt/todo.txt-cli/issues/359>`_.)
 
 1. Clone the repository.
 
