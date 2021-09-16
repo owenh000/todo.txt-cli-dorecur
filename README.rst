@@ -136,27 +136,23 @@ abbreviated todo-txt output).
 Installing
 ----------
 
-Install by cloning the repository into the todo.txt actions directory
-(``~/.todo.actions.d``, by default) with ``do`` as the target directory.
+There are two ways to install *dorecur*.
 
-.. code:: console
+- As a Git repository: clone the repository into the todo.txt-cli
+  actions directory (``~/.todo.actions.d``, by default) and create a
+  symlink. Future updates only require running ``git pull`` from
+  inside the repository.
 
-   $ cd ~/.todo.actions.d/
-   $ git clone "https://github.com/owenh000/todo.txt-cli-dorecur.git" do
+  .. code:: console
 
-Future updates only require running ``git pull`` from inside the
-repository.
+     $ cd ~/.todo.actions.d/
+     $ git clone "https://github.com/owenh000/todo.txt-cli-dorecur.git"
+     $ ln -s todo.txt-cli-dorecur/dorecur.py do
 
-.. code:: console
-
-   $ cd ~/.todo.actions.d/do/
-   $ git pull
-
-Alternatively, the *dorecur* add-on can also be installed by saving
-the ``dorecur.py`` file in your todo.txt-cli actions directory
-(``~/.todo.actions.d/``, by default) and renaming it to ``do``. This
-works in cases where Git and/or filesystem symlink support are
-unavailable.
+- As a single file: save the ``dorecur.py`` file to your todo.txt-cli
+  actions directory (``~/.todo.actions.d/``, by default) and rename it
+  to ``do``. This works in cases where Git and/or filesystem symlink
+  support are unavailable.
 
 -----------
 Development
