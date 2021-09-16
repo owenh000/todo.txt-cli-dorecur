@@ -136,44 +136,27 @@ abbreviated todo-txt output).
 Installing
 ----------
 
-The *dorecur* add-on can be installed by saving the ``dorecur.py``
-file in your todo.txt-cli actions directory (``~/.todo.actions.d/``,
-by default) and renaming it to ``do``.
+Install by cloning the repository into the todo.txt actions directory
+(``~/.todo.actions.d``, by default) with ``do`` as the target directory.
 
-Alternatively, clone the repository and create a symbolic link as
-described below. (Replace ``~/repos`` with your preferred location.)
-Note this **warning**, however: todo.txt-cli will ignore a broken
-symbolic link. Therefore if the repository is moved in the future, you
-will be marking recurring tasks as complete without creating new
-ones. If this is a concern, simply copy the script into place and
-rename as described above. (See `todo.txt-cli issue #359
-<https://github.com/todotxt/todo.txt-cli/issues/359>`_.)
+.. code:: console
 
-1. Clone the repository.
+   $ cd ~/.todo.actions.d/
+   $ git clone "https://github.com/owenh000/todo.txt-cli-dorecur.git" do
 
-   .. code:: console
+Future updates only require running ``git pull`` from inside the
+repository.
 
-      $ cd ~/repos/
-      $ git clone "https://github.com/owenh000/todo.txt-cli-dorecur.git"
+.. code:: console
 
-2. Change to the todo.txt-cli actions directory
-   (``~/.todo.actions.d``, by default). Then create a symbolic link to
-   ``dorecur.py`` named ``do`` (the ``--relative`` option could be
-   added to make the link more robust if the repository path is nearer
-   the actions directory than the filesystem root).
+   $ cd ~/.todo.actions.d/do/
+   $ git pull
 
-   .. code:: console
-
-      $ cd ~/.todo.actions.d
-      $ ln --symbolic ~/repos/todo.txt-cli-dorecur/dorecur.py do
-
-3. Future updates only require running ``git pull`` from inside the
-   repository.
-
-   .. code:: console
-
-      $ cd ~/repos/todo.txt-cli-dorecur/
-      $ git pull
+Alternatively, the *dorecur* add-on can also be installed by saving
+the ``dorecur.py`` file in your todo.txt-cli actions directory
+(``~/.todo.actions.d/``, by default) and renaming it to ``do``. This
+works in cases where Git and/or filesystem symlink support are
+unavailable.
 
 -----------
 Development
