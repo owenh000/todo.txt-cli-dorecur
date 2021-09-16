@@ -141,7 +141,9 @@ There are two ways to install *dorecur*.
 - As a Git repository: clone the repository into the todo.txt-cli
   actions directory (``~/.todo.actions.d``, by default) and create a
   symlink. Future updates only require running ``git pull`` from
-  inside the repository.
+  inside the repository. Note that todo.txt-cli will ignore a broken
+  symlink—see `todo.txt-cli issue #359
+  <https://github.com/todotxt/todo.txt-cli/issues/359>`_.
 
   .. code:: console
 
