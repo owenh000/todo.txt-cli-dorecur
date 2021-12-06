@@ -174,6 +174,8 @@ def make_new_task(line, now=datetime.date.today()):
     >>> make_new_task('Test task', now)
     >>> make_new_task('Test task rec:3d', now)
     'Test task rec:3d'
+    >>> make_new_task('1970-01-01 Test task rec:3d', now)
+    'Test task rec:3d'
     >>> make_new_task('Test task rec:+3d', now)
     'Test task rec:+3d'
     >>> make_new_task('Test task t:1970-01-01 rec:3d', now)
