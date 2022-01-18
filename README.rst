@@ -160,7 +160,7 @@ There are two ways to install *dorecur*.
 Development
 -----------
 
-To run tests: ``./do-recur.py test``
+To run tests: ``./dorecur.py test``
 
 -------
 Credits
