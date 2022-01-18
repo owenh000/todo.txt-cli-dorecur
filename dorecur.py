@@ -350,6 +350,9 @@ if __name__ == '__main__':
     elif args.action == 'do':
         for task in args.item:
             old_task = get_line(task)
+            if re.match(r'^x ', old_task):
+                print('Task {} is already marked as done!'.format(task))
+                sys.exit(1)
             new_task = make_new_task(old_task)
             mark_done(task)
             if new_task:
