@@ -238,7 +238,10 @@ def make_new_task(line, now=datetime.date.today()):
     due_date = get_date(line, 'due')
 
     # Remove optional creation date
-    line = re.sub("^(?P<pri>\([A-Z]\) )?\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]) ", "\g<pri>", line)
+    line = re.sub(r"""
+        ^(?P<pri>\([A-Z]\)\ )?\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])
+        \  # space
+    """, r'\g<pri>', line, flags=re.VERBOSE)
 
     if not start_date and not due_date:
         # Neither date is specified
